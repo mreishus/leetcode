@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def expand_palin_count(self, s, i, j):
         count = 0
@@ -13,7 +14,7 @@ class Solution:
         count = 0
         for i in range(len(s)):
             count += self.expand_palin_count(s, i, i)
-            count += self.expand_palin_count(s, i, i+1)
+            count += self.expand_palin_count(s, i, i + 1)
         return count
 
 
