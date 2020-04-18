@@ -36,20 +36,18 @@ class Solution:
                     heapq.heappush(q, (cost_there, x2, y2))
         if dist_to[(xe, ye)] == 999_999_999:
             return 0
-        print(grid)
-        print(dist_to)
         return dist_to[(xe, ye)]
 
 
 if __name__ == "__main__":
-    # print("64")
-    # grid = [
-    #     [1, 3, 1],
-    #     [1, 5, 1],
-    #     [4, 2, 1],
-    # ]
-    # print("Expect: 7")
-    # print(Solution().minPathSum(grid))
+    print("64")
+    grid = [
+        [1, 3, 1],
+        [1, 5, 1],
+        [4, 2, 1],
+    ]
+    print("Expect: 7")
+    print(Solution().minPathSum(grid))
     grid2 = [
         [1, 2, 3],
         [4, 5, 6],
