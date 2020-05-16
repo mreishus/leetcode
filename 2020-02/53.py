@@ -5,12 +5,12 @@ from typing import List
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        max_answer = nums[0]
+        max_sum = 0
         max_ending_here = 0
-        for i, num in enumerate(nums):
-            max_ending_here = max(max_ending_here + num, num)
-            max_answer = max(max_answer, max_ending_here)
-        return max_answer
+        for num in nums:
+            max_ending_here = max(num, num + max_ending_here)
+            max_sum = max(max_sum, max_ending_here)
+        return max_sum
 
 
 if __name__ == "__main__":
